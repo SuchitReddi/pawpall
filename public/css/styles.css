@@ -1,7 +1,7 @@
 html,
 body {
   height: 100%;
-  background-image: url(https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2017/07/nine-dogs-in-grassy-field.jpg);
+  background-image: url(/images/huskies.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -81,6 +81,3 @@ body {
 .btn-primary{
   margin-top: 20px;
 }
-
-
-
