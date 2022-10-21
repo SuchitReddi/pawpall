@@ -20,6 +20,8 @@ const { reset } = require("nodemon");
     console.log('MySQL connected...')
 }) */
 
+/*pull req for branch*/
+
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
