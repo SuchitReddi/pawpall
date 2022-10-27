@@ -33,22 +33,27 @@
   <body class="text-center">
     
 <main class="form-signin w-100 m-auto">
-  <form action="/" method="POST">
+  <form action="/add" method="POST">
     <img class="mb-4 doggo"  src="images/doggo1.png" alt="" width="80" height="100">
     <div id="pawdiv">
         <span><h1 class="h3 mb-3 fw-normal">Signup to my Puparazzi</h1></span>
         <span><img class="paw" src="images/paw.png"></span>
     </div>
-    <input name="fName" type="text" class="form-control top"  placeholder="Ur pup-arazzi name" required autofocus autocomplete="off">
-    <input name="fName" type="text" class="form-control top"  placeholder="Breed" required autocomplete="off">
-    <input name="fName" type="text" class="form-control top"  placeholder="Age" required autocomplete="off">
-    <input name="fName" type="text" class="form-control top"  placeholder="Location" required autocomplete="off">
-    <input name="fName" type="text" class="form-control top"  placeholder="Username" required autocomplete="off">
-    <input name="lName" type="password" class="form-control middle"  placeholder="Paw-sword" required>
+    <input name="pID" type="text" class="form-control top"  placeholder="Ur pup-arazzi ID" required autofocus autocomplete="off">
+    <input name="pName" type="text" class="form-control top"  placeholder="Ur pup-arazzi name" required autofocus autocomplete="off">
+    <input name="Breed" type="text" class="form-control top"  placeholder="Breed" required autocomplete="off">
+    <input name="Age" type="text" class="form-control top"  placeholder="Age" required autocomplete="off">
+    <input name="Loc" type="text" class="form-control top"  placeholder="Location" required autocomplete="off">
+    <input name="Uname" type="text" class="form-control top"  placeholder="Username" required autocomplete="off">
+    <input name="Pwd" type="password" class="form-control middle"  placeholder="Paw-sword" required>
+    <input name="OName" type="text" class="form-control top"  placeholder="Owner_name" required autocomplete="off">
+    <input name="Oage" type="text" class="form-control top"  placeholder="Owner_age" required autocomplete="off">
+    <input name="Pnumber" type="text" class="form-control top"  placeholder="Phone_number" required autocomplete="off">
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign me up!</button>
     
-    <p class="mt-5 mb-3 text-muted">&copy; Sherry</p>
+    <p class="mt-5 mb-3 text-muted">&copy; Pup</p>
   </form>
 </main>    
+<script src="app.js"></script>
   </body>
 </html>
