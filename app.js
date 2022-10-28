@@ -87,9 +87,12 @@ app.get("/:pagename", function (req, res){
     if(pgname == "Playmates"){
         res.sendFile(__dirname + "/playmates.html");
     }
+    if(pgname=="Vets"){
+        res.sendFile(__dirname + "/vets.html");
+    }
 })
 app.post('/add', (req, res, next)=>{
-        var pupid=req.body.pID;
+       // var pupid=req.body.pID;
         var pupname = req.body.pName;
         var pupbreed = req.body.Breed;
         var pupage = req.body.Age;
@@ -99,32 +102,21 @@ app.post('/add', (req, res, next)=>{
         var ownername=req.body.OName;
         var ownerage=req.body.Oage;
         var phone=req.body.Pnumber;
-        var sql="INSERT into profile values ("+pupid+",'"+pupname+"','"+ pupbreed +"', "+ pupage + ", '"+ location +"','"+username+"','" +pwd+"','"+ownername+"',"+ownerage+","+phone+")";
+        var sql="INSERT into profile(Pup_name,Breed,Age,Location,Username,Password,Owner_name,Owner_age,Phone_number) values ('"+pupname+"','"+ pupbreed +"', "+ pupage + ", '"+ location +"','"+username+"','" +pwd+"','"+ownername+"',"+ownerage+","+phone+")";
         db.query(sql,function(err,result){
         if(err) throw err
         console.log("record created in profile"); 
         res.redirect('/home')
     })    
 })
-/*
-app.get('/check', (req, res, next)=>{
-    var UName=req.body.UName;
-    var Passport=req.body.Passport
-    var sql="SELECT Username, Password from profile where Username='"+UName+"'";
-    db.query(sql,function(err,result){
-    if(err) throw err
-    console.log("record created in profile"); 
-    res.redirect('/home')    
-})
-}) */
+
 app.post('/check', function(request, response) {
 	// Capture the input fields
 	let username = request.body.UName;
 	let password = request.body.Password;
 	// Ensure the input fields exists and are not empty
 	if (username && password) {
-		// Execute SQL query that'll select the account from the database based on the specified username and password
-		// connection.query('SELECT * FROM profile WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
+		// Execute SQL query that'll select the account from the database based on the specified username and password;
         var sql="SELECT * from profile where username ='"+username+"' AND Password ='"+password+"';"
         db.query(sql,function(err,result){
         if(err) throw err
