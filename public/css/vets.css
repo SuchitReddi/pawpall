@@ -149,7 +149,7 @@ h6 {
 }
 
 .scroll-top:hover {
-  background: rgba(39, 167, 118, 0.8);
+  background: rgba(253, 223, 32, 0.941);
   color: #fff;
 }
 
@@ -589,11 +589,17 @@ h6 {
 }
 
 table{
-  width: 90%   ;
+  width: 90%;
   margin-top: 24px;
   margin-left: 24px;
   border-radius: 8px;
 }
+
+table tr:hover{
+  background-color: rgba(158, 156, 156, 0.76);
+  cursor: pointer;;
+}
+
 table, th{
   
   border-width: 0px;
@@ -601,17 +607,15 @@ table, th{
   border-color: #000;
   border-collapse: collapse;
   font-size: 16px;
-  color: #2cbc85  ;
+  color: #cda45e;
   font-family: var(--font-primary)
 }
 td, th{
+  background-color: none;
   padding: 16px;
 }
 
 
-.tb-row{
-background-color: black;
-}
 
 .gallery {
   margin-top: 40px;
@@ -622,7 +626,6 @@ background-color: black;
   height: 280px;
   width: 400px;
 }
-
 .gallery .gallery-item {
   position: relative;
   overflow: hidden;
@@ -641,7 +644,6 @@ background-color: black;
   background: rgba(0, 0, 0, 0.6);
   z-index: 3;
 }
-
 .gallery .gallery-links p{
   font-family: var(--font-primary);
   padding-left: 4px;
@@ -902,7 +904,7 @@ background-color: black;
   bottom: 0;
   left: 0;
   right: 0;
-  background: var(--color-primary);
+  background: #cda45e;
   z-index: -1;
 }
 
@@ -923,11 +925,11 @@ background-color: black;
   text-transform: uppercase;
   transition: 0.3s;
   color: #fff;
-  background: var(--color-primary);
+  background: #cda45e;
 }
 
 .hero .btn-get-started:hover {
-  background: #2cbc85;
+  background: rgba(114, 104, 33, 0.676);
 }
 
 @media (max-width: 768px) {
